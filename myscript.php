@@ -3,12 +3,10 @@
 echo "<pre>";
 
 var_dump($_GET);
-$testBad = $_GET['bad'];
-$testParagraph = $_GET['paragraph'];
+$badWord = $_GET['bad'];
+$text = $_GET['paragraph'];
 
 echo "</pre>";
-// echo $_GET['bad'];
-// echo $_GET['paragraph'];
 
 ?>
 
@@ -29,16 +27,16 @@ echo "</pre>";
         <h1 class="text-center">Hello PHP pag.2</h1>
         <div class="container d-flex flex-column align-items-center gap-5 py-5">
             <div class="card bg-secondary text-light border border-5 border-primary w-50 p-5">
-                <p><strong>Paragrapg =</strong> <?php echo $testParagraph ?></p>
-                <span><strong>Length of Paragraph =</strong> <?php echo strlen($testParagraph) ?></span>
+                <p><strong>Paragrapg =</strong> <?php echo $text ?></p>
+                <span><strong>Length of Paragraph =</strong> <?php echo strlen($text) ?></span>
                 <div class="text-center pt-5">
-                    <h5>Bad Word = <?php echo $testBad ?></h5>
+                    <h5>Bad Word = <?php echo $badWord ?></h5>
                 </div>
             </div>
             <!-- /card 1 -->
             <div class="card bg-secondary text-light border border-5 border-danger w-50 p-5">
-                <p><strong>Paragrapg =</strong> <?php echo $testParagraph ?></p>
-                <span><strong>Length of Paragraph =</strong> <?php echo strlen($testParagraph) ?></span>
+                <p><strong>Paragraph =</strong> <?php echo $text ?></p>
+                <span><strong>Length of Paragraph =</strong> <?php echo strlen($text) ?></span>
             </div>
             <!-- /card 2 -->
         </div>
