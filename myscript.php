@@ -2,9 +2,10 @@
 
 echo "<pre>";
 
-var_dump($_GET);
 $badWord = $_GET['bad'];
 $text = $_GET['paragraph'];
+$censoredWord = '***';
+$censoredText = str_replace($badWord, $censoredWord, $text);
 
 echo "</pre>";
 
@@ -35,8 +36,8 @@ echo "</pre>";
             </div>
             <!-- /card 1 -->
             <div class="card bg-secondary text-light border border-5 border-danger w-50 p-5">
-                <p><strong>Paragraph =</strong> <?php echo $text ?></p>
-                <span><strong>Length of Paragraph =</strong> <?php echo strlen($text) ?></span>
+                <p><strong>Paragraph =</strong> <?php echo $censoredText ?></p>
+                <span><strong>Length of Paragraph =</strong> <?php echo strlen($censoredText) ?></span>
             </div>
             <!-- /card 2 -->
         </div>
